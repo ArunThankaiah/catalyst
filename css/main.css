@@ -383,7 +383,7 @@ img {
 	right: 0;
 	padding: 0 15px;
 	line-height: 40px;
-	background-color: #ffe37b;
+	background-color: #ed1c24;
 	color: black;
 }
 .sticky .nav .switcher.color i{
@@ -653,7 +653,7 @@ dd{
 	-webkit-border-radius: 50%;
 	-moz-border-radius: 50%;
 	border-radius: 50%;
-	background-color: #ffe37b;
+	background-color: #ee1c24;
 	position: relative;
 	display: inline-block;
 	margin-left: 2px;
@@ -707,7 +707,7 @@ dd{
 	transform: translateY(-50%) rotate(-45deg);
 }
 .contact-round:hover>span{
-	background-color: #ee1c25;
+	background-color: #ffe37b;
 }
 .contact-content .contact-round {
 	bottom: 5px;
@@ -731,7 +731,7 @@ dd{
 	transform: translateY(-40%); 
 }
 .contact-round:hover{
-	background-color: #ee1c25;
+	background-color: #ffe37b;
 }
 @media screen and (max-width: 1200px) {
 	.grid-contact {
@@ -1575,6 +1575,9 @@ audio::-webkit-media-controls-enclosure, video::-webkit-media-controls-enclosure
 .page-boxed .tp-banner-container {
     width: 100% !important;
     left: 0 !important;
+	background-color: #fff;
+	position: relative;
+	z-index: 9;
 }
 .tp-leftarrow,
 .tp-rightarrow{
@@ -6271,26 +6274,27 @@ td.ui-datepicker-current-day {}
 .product-container{
 	width: 80%;
 	margin: auto;
+	padding-bottom: 50px;
 }
 .product-grid{
 	display: grid;
 	grid-template-columns: repeat(3, 350px);
+	gap:  80px 30px;
 	justify-content: center;
-	gap: 30px 30px ;
-	padding-bottom: 50px;
+	
+	
+	
 }
-.item-img{
-	display: flex;
-	align-items: center;
-	justify-content: center;
-}
+
 .single-item{
 	display: block;
-	width: 150px;	
+	width: 100%;
+	height: 100%;
+	object-fit: contain;
 }
 .item-detail{
 	padding: 20px 10px;
-	text-align: center;
+	
 }
 .item-title{
 	font-size: 20px;
@@ -6301,28 +6305,45 @@ td.ui-datepicker-current-day {}
 .item-sub-title{
 	font-size: 14px;
 	font-weight: 500;
-	padding-bottom: 50px;
 	color: #525252;
 	text-transform: uppercase;
 	
 }
 .item-disc{
-	font-size: 13px;
-	padding: 10px 30px 30px 20px;
-	
-}
-.item-btn{
-	font-size: 16px;
-	font-weight: 600;
-	color: #fff;
-	background: #ee1c24;
-	padding: 10px 30px;
-	text-align: center;
-	margin-top: 20px;
-	
+	position: relative;
+	font-size: 14px;
+	font-weight: 400;
+	margin-top: 10px;
+	margin-bottom: 35px;
+	line-height: normal;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	display: -webkit-box;
+	-webkit-line-clamp: 5;
+	-webkit-box-orient: vertical;
 
 	
 }
+.btn-hero{
+	text-align: center;
+	display: block;
+	background-color: #ed1c24;
+	padding: 20px 30px;
+	
+}
+.item-btn{
+width: 100%;
+color: #fff;
+font-size: 14px;
+font-weight: 400;
+overflow: hidden;
+text-overflow: ellipsis;
+position: relative;
+transition: 0.5s;
+	
+}
+
+
 @media screen and (max-width: 1114px){
 
 	.product-grid{
@@ -6338,5 +6359,24 @@ td.ui-datepicker-current-day {}
 		display: flex;
 		flex-direction: column;
 	}
+	.item-detail{
+		text-align: center;
+	}
 	
 } 
+
+.whats-app{
+	position: relative;
+}
+.whats-app-icon{
+	position: fixed;
+	bottom: 20%;
+	left: 20px;
+	z-index: 2;
+	
+}
+.whats-img{
+	display: block;
+	width: 50px;
+	
+}
